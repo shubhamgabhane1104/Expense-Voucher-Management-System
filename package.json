@@ -1,0 +1,27 @@
+{
+  "name": "expense-voucher-management-system",
+  "version": "1.0.0",
+  "description": "Full-Stack Web-based Expense Voucher Management System for ABC Company",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently -k -p \"[{name}]\" -n \"SERVER,CLIENT\" -c \"cyan.bold,magenta.bold\" \"npm run server\" \"npm run client\"",
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client run dev",
+    "seed": "npm --prefix server run seed",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install"
+  },
+  "keywords": [
+    "voucher",
+    "expense-management",
+    "full-stack",
+    "react",
+    "express",
+    "sqlite"
+  ],
+  "author": "Full Stack Developer Candidate",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
